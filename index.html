@@ -5,14 +5,14 @@
   var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 	
   function escape(textElement) {
-		console.log(textElement);
-		str = textElement.value;
+    console.log(textElement);
+    str = textElement.value;
 		
     if (typeof str !== 'string') {
       throw new TypeError('Expected a string');
     }
 
-    document.getElementByID("result").innerText = str.replace(matchOperatorsRe, '\\$&');
+    document.getElementById("result").innerText = str.replace(matchOperatorsRe, '\\$&');
 
   };
   
@@ -22,8 +22,7 @@
 
   <input type="text" onchange="escape">
   <br>
-  <span id="result"></span>
-  
+  <span id="result"></span>  
 
 </BODY>
 </HTML>
