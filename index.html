@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+  <script type="text/javascript">
+
+  var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
+
+  function escape(textElement) {
+    if (typeof str !== 'string') {
+      throw new TypeError('Expected a string');
+    }
+
+    document.getElementByID("result").innerText = str.replace(matchOperatorsRe, '\\$&');
+
+  };
+  
+  </script>
+</HEAD>
+<BODY>
+
+  <input type="text" onchange="escape(this.value)">
+  <br>
+  <span id="result"></span>
+  
+
+</BODY>
+</HTML>
